@@ -1,0 +1,283 @@
+
+Асус@asus MINGW32 ~
+$ cd D:\Repository
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   task1/status.txt
+
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   task1/status.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   task1/status.txt
+
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git add task1/status.txt
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   task1/status.txt
+
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git log
+commit 31b090741bb32084e64346b8d6ea2b172efb8829 (HEAD -> master)
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:13:45 2018 +0300
+
+    add .gitignore
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git commit -m "add task1/status.txt"
+[master 32f21be] add task1/status.txt
+ 1 file changed, 27 insertions(+)
+ create mode 100644 task1/status.txt
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git log
+commit 32f21bec36f7a8b7a3dc2e7b32e790c4eaaf95b1 (HEAD -> master)
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:32:15 2018 +0300
+
+    add task1/status.txt
+
+commit 31b090741bb32084e64346b8d6ea2b172efb8829
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:13:45 2018 +0300
+
+    add .gitignore
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        task1/log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git add task1/log.txt
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git commit -m "add task1/log.txt"
+[master a446f55] add task1/log.txt
+ 1 file changed, 12 insertions(+)
+ create mode 100644 task1/log.txt
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   task1/status.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git add task1/status.txt
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git commit -m "add task1/status.txt"
+[master d28fab4] add task1/status.txt
+ 1 file changed, 2 insertions(+)
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git log
+commit d28fab422326fb3e93aa4971b23b18dba312386d (HEAD -> master)
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:36:26 2018 +0300
+
+    add task1/status.txt
+
+commit a446f55cbd6eabac13e0097753c32595db9f576f
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:34:37 2018 +0300
+
+    add task1/log.txt
+
+commit 32f21bec36f7a8b7a3dc2e7b32e790c4eaaf95b1
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:32:15 2018 +0300
+
+    add task1/status.txt
+
+commit 31b090741bb32084e64346b8d6ea2b172efb8829
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:13:45 2018 +0300
+
+    add .gitignore
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git remote add origin https://github.com/RedBuildeR/RedRepositoryKY.git
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git push origin master
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (15/15), 1.64 KiB | 239.00 KiB/s, done.
+Total 15 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/RedBuildeR/RedRepositoryKY.git
+ * [new branch]      master -> master
+
+Асус@asus MINGW32 /d/Repository (master)
+$ cd D:\otherRepo
+
+Асус@asus MINGW32 /d/otherRepo
+$ git clone https://github.com/RedBuildeR/RedRepositoryKY.git
+Cloning into 'RedRepositoryKY'...
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 15 (delta 2), reused 15 (delta 2), pack-reused 0
+Unpacking objects: 100% (15/15), done.
+
+Асус@asus MINGW32 /d/otherRepo
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+
+Асус@asus MINGW32 /d/otherRepo
+$ cd D:\otherRepo\RedRepositoryKY
+bash: cd: D:otherRepoRedRepositoryKY: No such file or directory
+
+Асус@asus MINGW32 /d/otherRepo
+$ cd D:\otherRepo\RedRepositoryKY
+bash: cd: D:otherRepoRedRepositoryKY: No such file or directory
+
+Асус@asus MINGW32 /d/otherRepo
+$ cd D:/otherRepo/RedRepositoryKY
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   task1/status.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ git add task1/status.txt
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ git commit -m "add task1/status.txt"
+[master bb59501] add task1/status.txt
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 483 bytes | 241.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/RedBuildeR/RedRepositoryKY.git
+   d28fab4..bb59501  master -> master
+
+Асус@asus MINGW32 /d/otherRepo/RedRepositoryKY (master)
+$ cd D:/Repository
+
+Асус@asus MINGW32 /d/Repository (master)
+$ git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 4 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/RedBuildeR/RedRepositoryKY
+ * branch            master     -> FETCH_HEAD
+   d28fab4..bb59501  master     -> origin/master
+Updating d28fab4..bb59501
+Fast-forward
+ task1/status.txt | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
