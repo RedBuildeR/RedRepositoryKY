@@ -1,0 +1,12 @@
+commit 32f21bec36f7a8b7a3dc2e7b32e790c4eaaf95b1 (HEAD -> master)
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:32:15 2018 +0300
+
+    add task1/status.txt
+
+commit 31b090741bb32084e64346b8d6ea2b172efb8829
+Author: RedBuildeR <36187882+RedBuildeR@users.noreply.github.com>
+Date:   Mon Feb 12 18:13:45 2018 +0300
+
+    add .gitignore
+
