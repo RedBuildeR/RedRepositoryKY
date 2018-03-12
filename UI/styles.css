@@ -1,0 +1,424 @@
+.wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+    .HeadTable{
+        width: 100%;
+        background: #bc33f2;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+        .Indent{
+            width: 5%;
+        }
+        .Logo{
+            padding: 0.625em 0.5em 0.625em 3em;
+            width: 10%;
+        }
+        .NameSite{
+            color: white;
+            padding: 0 0 0 0.5em;
+            font-size: 1.5em;
+            font-family: "Cooper Black";
+            width: 60%;
+        }
+        .ButtonLogIn{
+            width: 10%;
+            padding-right: 10px;
+        }
+        .ButtonSignIn{
+            width: 10%;
+        }
+        .buttonLogIn{
+            color: #bbbbbf;
+            text-decoration: none;
+            outline: none;
+            background: #ffffff;
+            border: 0;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 5px 16px;
+        }
+        .buttonLogIn:active{
+            background: #bbbbbf;
+            color: #ffffff;
+        }
+        .buttonSignIn{
+            color: #ffffff;
+            text-decoration: none;
+            outline: none;
+            background: #00ffff;
+            border: 0;
+            border-radius: 3px;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 5px 16px;
+        }
+        .buttonSignIn:active{
+            background: #ffffff;
+            color: #00ffff;
+        }
+    .ButtonPrev{
+        position: fixed;
+        left: 0;
+        top: 50%;
+        text-decoration: none;
+        outline: none;
+        border: 0;
+        background: #f24267;
+        width: 50px;
+        height: 100px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        z-index: 19;
+    }
+    .ButtonPrev:active{
+        box-shadow: none;
+        background: rgba(242, 66, 103, 0.53);
+    }
+    .ButtonNext{
+        position: fixed;
+        right: 0;
+        top: 50%;
+        text-decoration: none;
+        outline: none;
+        border: 0;
+        background: #f24267;
+        width: 50px;
+        height: 100px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+    .ButtonNext:active{
+        box-shadow: none;
+        background: rgba(242, 66, 103, 0.53);
+    }
+    .ButtonPrevNextImg{
+        width: 30px;
+    }
+    .Content{
+        width: 80%;
+        margin: 0 auto;
+    }
+        .IPanelWrap{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+            padding-bottom: 2em;
+        }
+            .InterfacePanel{
+                margin-top: 2%;
+                width: 100%;
+                background: rgba(255, 241, 241, 0.5);
+            }
+                .IPanelLeft{
+                    width: calc(50% - 2em);
+                    padding-left: 2em;
+                    padding-top: 2em;
+                    padding-bottom: 2em;
+                    float: left;
+                }
+                    .SortSerchElement{
+                        margin-top: 0.5em;
+                        float: left;
+                        padding: 0 1em 0 1em;
+                     }
+                    .padding{
+                        padding-left: 3px;
+                        padding-right: 3px;
+                    }
+                    .triangle{
+                        width: 0;
+                        height: 0;
+                        border-bottom: 16px solid aqua;
+                        border-left: 16px solid transparent;
+                        margin-right: 0.625em;
+                        float: left;
+                    }
+                    .more{
+                        color: #ffffff;
+                        text-decoration: none;
+                        outline: none;
+                        background: #4e3beb;
+                        border: #4e3beb 1px solid;
+                        border-radius: 3px;
+                        padding: 0.1em 0.4375em;
+                        margin-bottom: 2px;
+                    }
+                    .more:active{
+                        color: #ab08eb;
+                        background: #ffffff;
+                        border: #ab08eb 1px solid;
+                    }
+                    .SortDate{
+                        text-decoration: none;
+                        outline:  none;
+                        border: #4e3beb solid 2px;
+                        border-radius: 6px;
+                    }
+                .IPanelRight{
+                    width: calc(50% - 2em);
+                    padding: 2em 0 2em 1em;
+                    margin: 2em auto;
+                    float: left;
+                }
+                    .ButtonAddPost{
+                        width: 120px;
+                        height: 120px;
+                        text-decoration: none;
+                        outline: none;
+                        border: 1px solid #ab08eb;
+                        padding: 0;
+                        background: #ab08eb;
+                    }
+                    .ButtonAddPost:active{
+                        background: rgba(171, 8, 235, 0.55);
+                        border: rgba(171, 8, 235, 0.55);
+                    }
+                .CleanFix{
+                    clear: both;
+                }
+        .PPanelWrap{
+            margin-top: 2em;
+
+        }
+            .PostPanel{
+                vertical-align: top;
+                width: 90%;
+                height: 786px;
+                padding-top: 1em;
+                padding-bottom: 1.5em;
+                margin: 0 auto 3em;
+                background: rgba(255, 241, 241, 0.5);
+            }
+                .PostPanelAlign{
+                    vertical-align: top;
+                    float: left;
+                    width: 50%;
+                }
+                    .Post{
+
+                    }
+                    .ImgWrap{
+                        position: relative;
+                        width: 150px;
+                        height: 150px;
+                    }
+                    .IWimg{
+                        width: 150px;
+                    }
+                    .ButtonLike{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        color: #ffffff;
+                        text-decoration: none;
+                        outline: none;
+                        background: #f24267;
+                        border: #f24267 1px solid;
+                        border-radius: 3px;
+                        padding: 0.1em 0.4375em;
+                        margin-bottom: 5px;
+                        margin-right: 5px;
+                    }
+                    .ButtonLike:active{
+                        color: #ab08eb;
+                        background: #ffffff;
+                        border: #ab08eb 1px solid;
+                    }
+                    .TagMobile{
+                        display: none;
+                        position: absolute;
+                        right: 0;
+                        bottom: 21px;
+                        margin-bottom: 5px;
+                        margin-right: 5px;
+                    }
+                    .Nickname{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin-top: 5px;
+                        margin-right: 5px;
+                    }
+                    .DateMobile{
+                        display: none;
+                    }
+                    .InfoOfPost{
+                        width: 9em;
+                        height: 9em;
+                        border: 3px solid #4f4f4f;
+                        border-bottom-right-radius: 1em;
+                        border-top-right-radius: 1em;
+                        margin-left: 0.5em;
+                    }
+                    .InfoOfPostTable{
+                        width: calc(100% - 1em);
+                        height: 95%;
+                        padding-left: 0.3em;
+                    }
+                    .InfoOfPostDate{
+                        height: 1.5625em;
+                        padding-bottom: 0.3em;
+                    }
+                    .InfoOfPostTags{
+                        vertical-align: top;
+                        height: 35%;
+                    }
+                    .WrapTags{
+                        width: 2.5em;
+                        font-size: 0.8em;
+                        color: #ffffff;
+                        text-decoration: none;
+                        outline: none;
+                        background: rgba(171, 8, 235, 0.47);
+                        border: #d084ee 1px solid;
+                        border-radius: 3px;
+                        padding: 1px 2px;
+                        margin-left: 0.6em;
+                        margin-bottom: 0.1em;
+                        float: left;
+                    }
+                    .WrapTagsBMore{
+                        width: 2.5em;
+                        font-size: 0.8em;
+                        text-align: center;
+                        color: #ab08eb;
+                        text-decoration: none;
+                        outline: none;
+                        background: #ffffff;
+                        border: #d084ee 1px solid;
+                        border-radius: 3px;
+                        padding: 1px 2px;
+                        margin-left: 0.6em;
+                        margin-bottom: 0.1em;
+                        float: left;
+                    }
+                    .InfoOfPostDes{
+                        vertical-align: top;
+                    }
+                    .PostDescription{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 0.8em;
+                        height: 45px;
+                    }
+    footer{
+        color: white;
+        width: 80%;
+        margin: 0 auto;
+        background: rgba(188, 51, 242, 0.81);
+        line-height: 0.5em;
+    }
+        .footerTable{
+            width: 100%;
+        }
+@media screen and (max-width: 1000px){
+    .IPanelLeft{
+        width: 100%;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        background: rgba(250, 235, 215, 0.38);
+    }
+    .SortSerchElement{
+        border: none;
+    }
+    .IPanelRight{
+        width: 50%;
+        padding-left: 0;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+@media screen and (max-width: 920px){
+    .PostPanelAlign{
+        width: 326.875px;
+        margin-right: calc((100% - 326.875px)/2);
+        margin-left: calc((100% - 326.875px)/2);
+    }
+    .PostPanel{
+        width: 90%;
+        height: calc(2 * 786px);
+        padding-top: 1em;
+        padding-bottom: 1.5em;
+        margin: 0 auto 3em;
+        background: rgba(255, 241, 241, 0.5);
+    }
+}
+@media screen and (max-width: 860px){
+    .ButtonLogIn{
+        width: 71px;
+        padding-right: 10px;
+    }
+    .ButtonSignIn{
+        width: 81px;
+    }
+    .Indent{
+        width: calc(25% - 71px - 81px);
+    }
+    .Logo{
+        width: calc(30% - 71px - 81px);
+    }
+    .NameSite{
+        width: calc(80% - 71px - 81px);
+    }
+    .SortSerchElement{
+        float: none;
+        background: rgba(250, 235, 215, 0.38);
+        width: 85%;
+        margin-left: 5%;
+    }
+    .IPanelLeft{
+        background: none;
+    }
+}
+@media screen and (max-width: 585px){
+
+    .IPanelLeft{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 470px){
+    footer{
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .NameSite{
+        display: none;
+    }
+    .Logo{
+        width: 45px;
+        height: 45px;
+        padding-left: 0;
+        padding-right: 1em;
+    }
+    .ButtonPrev,.ButtonNext{
+        width: 35px;
+    }
+
+    .ButtonPrevNextImg{
+        width: 25px;
+    }
+    .InfoOfPost{
+        display: none;
+    }
+    .DateMobile{
+        display: block;
+        font-size: 0.8em;
+        padding-top: 2px;
+        border-top: 1px solid #7d7d7d;
+    }
+    .TagMobile{
+        display: block;
+        bottom: 0;
+    }
+    .ButtonLike{
+        bottom: 24px;
+    }
+
+}
