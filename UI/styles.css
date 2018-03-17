@@ -1,36 +1,73 @@
+@font-face {
+
+    font-family: "Into Black Regular";
+    src: url("fonts/IntoBlack.ttf") format("truetype");
+}
+@font-face {
+
+    font-family: "Flamme Let";
+    src: url("fonts/FlammeLet.ttf") format("truetype");
+}
+@font-face {
+
+    font-family: "Pacifico";
+    src: url("fonts/Pacifico.ttf") format("truetype");
+}
+@font-face {
+
+    font-family: "Arsenal Regular";
+    src: url("fonts/ArsenalRegular.ttf") format("truetype");
+}
+@font-face {
+
+    font-family: "Comfortaa Regular";
+    src: url("fonts/Comfortaa/Comfortaa-Regular.ttf") format("truetype");
+}
+@font-face {
+
+    font-family: "Comfortaa Bold";
+    src: url("fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
+}
 .wrap{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-    .HeadTable{
-        width: 100%;
-        background: #bc33f2;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-        .Indent{
-            width: 5%;
+    header{
+            width: 100%;
+            background: #bc33f2;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
-        .Logo{
+        .logo{
+
             padding: 0.625em 0.5em 0.625em 3em;
             width: 10%;
+            display: flex;
+            justify-content: flex-end;
         }
-        .NameSite{
+        .name-site{
             color: white;
             padding: 0 0 0 0.5em;
-            font-size: 1.5em;
-            font-family: "Cooper Black";
+            font-size: 2.6em;
+            font-family: "Flamme Let";
             width: 60%;
         }
-        .ButtonLogIn{
+        .wrap-button-log-in{
+            /*not used*/
             width: 10%;
             padding-right: 10px;
         }
-        .ButtonSignIn{
+        .wrap-button-sign-in{
             width: 10%;
         }
-        .buttonLogIn{
+        .button-log-in{
+            /*not used*/
+            font-family: "Into Black Regular";
             color: #bbbbbf;
             text-decoration: none;
             outline: none;
@@ -41,11 +78,13 @@
             font-size: 13px;
             padding: 5px 16px;
         }
-        .buttonLogIn:active{
+        .button-log-in:active{
+            /*not used*/
             background: #bbbbbf;
             color: #ffffff;
         }
-        .buttonSignIn{
+        .button-sign-in{
+            font-family: "Into Black Regular";
             color: #ffffff;
             text-decoration: none;
             outline: none;
@@ -56,11 +95,11 @@
             font-size: 13px;
             padding: 5px 16px;
         }
-        .buttonSignIn:active{
+        .button-sign-in:active{
             background: #ffffff;
             color: #00ffff;
         }
-    .ButtonPrev{
+    .button-previous-posts{
         position: fixed;
         left: 0;
         top: 50%;
@@ -75,11 +114,11 @@
         border-bottom-right-radius: 50px;
         z-index: 19;
     }
-    .ButtonPrev:active{
+    .button-previous-posts:active{
         box-shadow: none;
         background: rgba(242, 66, 103, 0.53);
     }
-    .ButtonNext{
+    .button-next-posts{
         position: fixed;
         right: 0;
         top: 50%;
@@ -93,39 +132,46 @@
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
     }
-    .ButtonNext:active{
+    .button-next-posts:active{
         box-shadow: none;
         background: rgba(242, 66, 103, 0.53);
     }
-    .ButtonPrevNextImg{
+    .button-next-previous-posts-img{
         width: 30px;
     }
-    .Content{
+    .content{
         width: 80%;
         margin: 0 auto;
     }
-        .IPanelWrap{
+        .interface-panel-wrap{
             border-bottom: 1px solid rgba(0, 0, 0, 0.21);
             padding-bottom: 2em;
         }
-            .InterfacePanel{
+            .interface-panel{
                 margin-top: 2%;
                 width: 100%;
                 background: rgba(255, 241, 241, 0.5);
             }
-                .IPanelLeft{
-                    width: calc(50% - 2em);
+                .interface-panel-left{
+                    width: calc(60% - 2em);
                     padding-left: 2em;
                     padding-top: 2em;
                     padding-bottom: 2em;
                     float: left;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
                 }
-                    .SortSerchElement{
+                    .sort-search-element{
                         margin-top: 0.5em;
                         float: left;
                         padding: 0 1em 0 1em;
+                        font-family: "Arsenal Regular";
+                        display: flex;
+                        flex-direction: column;
                      }
                     .padding{
+                        font-family: "Into Black Regular";
                         padding-left: 3px;
                         padding-right: 3px;
                     }
@@ -138,6 +184,7 @@
                         float: left;
                     }
                     .more{
+                        font-family: "Arsenal Regular";
                         color: #ffffff;
                         text-decoration: none;
                         outline: none;
@@ -152,19 +199,19 @@
                         background: #ffffff;
                         border: #ab08eb 1px solid;
                     }
-                    .SortDate{
+                    .sort-date{
                         text-decoration: none;
                         outline:  none;
                         border: #4e3beb solid 2px;
                         border-radius: 6px;
                     }
-                .IPanelRight{
-                    width: calc(50% - 2em);
+                .interface-panel-right{
+                    width: calc(40% - 2em);
                     padding: 2em 0 2em 1em;
                     margin: 2em auto;
                     float: left;
                 }
-                    .ButtonAddPost{
+                    .button-add-post{
                         width: 120px;
                         height: 120px;
                         text-decoration: none;
@@ -173,43 +220,51 @@
                         padding: 0;
                         background: #ab08eb;
                     }
-                    .ButtonAddPost:active{
+                    .button-add-post:active{
                         background: rgba(171, 8, 235, 0.55);
                         border: rgba(171, 8, 235, 0.55);
                     }
-                .CleanFix{
+                .clear-fix{
                     clear: both;
                 }
-        .PPanelWrap{
+        .post-panel-wrap{
             margin-top: 2em;
 
         }
-            .PostPanel{
+            .post-panel{
                 vertical-align: top;
                 width: 90%;
-                height: 786px;
+                height: 802px;
                 padding-top: 1em;
                 padding-bottom: 1.5em;
                 margin: 0 auto 3em;
                 background: rgba(255, 241, 241, 0.5);
             }
-                .PostPanelAlign{
+                .post-panel-align{
                     vertical-align: top;
                     float: left;
                     width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
                 }
-                    .Post{
-
+                    .post{
+                        display: flex;
+                        flex-direction: row;
+                        margin-top: 12px;
                     }
-                    .ImgWrap{
+                    .post-img-wrap{
                         position: relative;
                         width: 150px;
                         height: 150px;
                     }
-                    .IWimg{
+                    .post-img{
                         width: 150px;
                     }
-                    .ButtonLike{
+                    .button-like{
+                        font-family: "Arsenal Regular";
+                        font-size: 1em;
                         position: absolute;
                         bottom: 0;
                         right: 0;
@@ -223,51 +278,59 @@
                         margin-bottom: 5px;
                         margin-right: 5px;
                     }
-                    .ButtonLike:active{
+                    .button-like:active{
                         color: #ab08eb;
                         background: #ffffff;
                         border: #ab08eb 1px solid;
                     }
-                    .TagMobile{
+                    .post-tag-mobile{
                         display: none;
                         position: absolute;
                         right: 0;
                         bottom: 21px;
                         margin-bottom: 5px;
-                        margin-right: 5px;
                     }
-                    .Nickname{
+                    .nickname{
                         position: absolute;
                         top: 0;
                         right: 0;
                         margin-top: 5px;
                         margin-right: 5px;
+                        font-family: "Arsenal Regular";
                     }
-                    .DateMobile{
+                    .date-tag-mobile{
                         display: none;
                     }
-                    .InfoOfPost{
+                    .info-post{
                         width: 9em;
                         height: 9em;
                         border: 3px solid #4f4f4f;
                         border-bottom-right-radius: 1em;
                         border-top-right-radius: 1em;
                         margin-left: 0.5em;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                     }
-                    .InfoOfPostTable{
+                    .info-post-table{
                         width: calc(100% - 1em);
                         height: 95%;
                         padding-left: 0.3em;
                     }
-                    .InfoOfPostDate{
+                    .info-post-date{
+                        font-family: "Into Black Regular";
                         height: 1.5625em;
-                        padding-bottom: 0.3em;
+                        padding: 0.15em 0 0.15em 0;
+                        text-align: left;
                     }
-                    .InfoOfPostTags{
+                    .info-post-tags{
+                        font-size: 0.8em;
+                        font-family: "Comfortaa Bold";
                         vertical-align: top;
                         height: 35%;
                     }
-                    .WrapTags{
+                    .post-tags{
                         width: 2.5em;
                         font-size: 0.8em;
                         color: #ffffff;
@@ -277,11 +340,10 @@
                         border: #d084ee 1px solid;
                         border-radius: 3px;
                         padding: 1px 2px;
-                        margin-left: 0.6em;
-                        margin-bottom: 0.1em;
+                        margin: 0.3em 0.6em 0.3em 0;
                         float: left;
                     }
-                    .WrapTagsBMore{
+                    .post-tag-more{
                         width: 2.5em;
                         font-size: 0.8em;
                         text-align: center;
@@ -292,56 +354,61 @@
                         border: #d084ee 1px solid;
                         border-radius: 3px;
                         padding: 1px 2px;
-                        margin-left: 0.6em;
-                        margin-bottom: 0.1em;
+                        margin: 0.3em 0.6em 0.3em 0;
                         float: left;
                     }
-                    .InfoOfPostDes{
+                    .info-post-description{
                         vertical-align: top;
                     }
-                    .PostDescription{
+                    .post-description{
+                        font-family: "Arsenal Regular";
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        font-size: 0.8em;
-                        height: 45px;
+                        font-size: 14.4px;
+                        height: 50px;
+                        width: 100%;
+                        text-align: left;
                     }
     footer{
+        font-family: "Arsenal Regular";
         color: white;
         width: 80%;
         margin: 0 auto;
         background: rgba(188, 51, 242, 0.81);
         line-height: 0.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
-        .footerTable{
-            width: 100%;
-        }
 @media screen and (max-width: 1000px){
-    .IPanelLeft{
+    .interface-panel-left{
         width: 100%;
         padding-left: 0;
         margin-left: 0;
         margin-right: 0;
-        background: rgba(250, 235, 215, 0.38);
     }
-    .SortSerchElement{
+    .sort-search-element{
         border: none;
     }
-    .IPanelRight{
+    .interface-panel-right{
         width: 50%;
         padding-left: 0;
         margin-left: 25%;
         margin-right: 25%;
     }
+    .button-add-post{
+        width: 100%;
+    }
 }
 @media screen and (max-width: 920px){
-    .PostPanelAlign{
+    .post-panel-align{
         width: 326.875px;
         margin-right: calc((100% - 326.875px)/2);
         margin-left: calc((100% - 326.875px)/2);
     }
-    .PostPanel{
+    .post-panel{
         width: 90%;
-        height: calc(2 * 786px);
+        height: calc(2 * 802px);
         padding-top: 1em;
         padding-bottom: 1.5em;
         margin: 0 auto 3em;
@@ -349,38 +416,38 @@
     }
 }
 @media screen and (max-width: 860px){
-    .ButtonLogIn{
+    .wrap-button-log-in{
         width: 71px;
         padding-right: 10px;
     }
-    .ButtonSignIn{
+    .wrap-button-sign-in{
         width: 81px;
     }
-    .Indent{
-        width: calc(25% - 71px - 81px);
+    .name-site{
+        width: 40%;
     }
-    .Logo{
-        width: calc(30% - 71px - 81px);
-    }
-    .NameSite{
-        width: calc(80% - 71px - 81px);
-    }
-    .SortSerchElement{
-        float: none;
-        background: rgba(250, 235, 215, 0.38);
-        width: 85%;
-        margin-left: 5%;
-    }
-    .IPanelLeft{
+    .interface-panel-left{
         background: none;
     }
 }
 @media screen and (max-width: 585px){
 
-    .IPanelLeft{
+    .interface-panel-left{
         width: 100%;
         margin-left: 0;
         margin-right: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-search-element{
+        float: none;
+        background: rgba(250, 235, 215, 0.38);
+        width: 70%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    .name-site{
+        width: 35%;
     }
 }
 @media screen and (max-width: 470px){
@@ -388,37 +455,50 @@
         width: 100%;
         font-size: 0.8em;
     }
-    .NameSite{
+    .name-site{
         display: none;
     }
-    .Logo{
+    .logo{
         width: 45px;
         height: 45px;
         padding-left: 0;
-        padding-right: 1em;
+        padding-right: 4em;
     }
-    .ButtonPrev,.ButtonNext{
+    .button-previous-posts,.button-next-posts{
         width: 35px;
     }
-
-    .ButtonPrevNextImg{
+    .button-next-previous-posts-img{
         width: 25px;
     }
-    .InfoOfPost{
+    .interface-panel-left{
+        align-items: center;
+    }
+    .sort-search-element{
+        margin: 5px;
+        width: 70%;
+    }
+    .info-post{
         display: none;
     }
-    .DateMobile{
+    .date-tag-mobile{
+        font-family: "Arsenal Regular";
         display: block;
         font-size: 0.8em;
         padding-top: 2px;
         border-top: 1px solid #7d7d7d;
     }
-    .TagMobile{
+    .post-tag-mobile{
         display: block;
         bottom: 0;
     }
-    .ButtonLike{
+    .button-like{
+        font-size: 0.83em;
         bottom: 24px;
+        margin-right: 0.6em;
+        margin-bottom: 0.5em;
+    }
+    .button-add-post{
+        width: 120px;
     }
 
 }

@@ -7,39 +7,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<script src="functional.js"></script>
     <div class="wrap">
-        <table  class="HeadTable">
-            <tr>
-                <td class="Indent"></td>
-                <td class="Logo">
-                    <img src="logo.png" width="45">
-                </td>
-                <td class="NameSite">
-                    PhotoPortal
-                </td>
-                <td class="ButtonLogIn" align="right">
-                    <button class="buttonLogIn">Log in</button>
-                </td>
-                <td class="ButtonSignIn">
-                    <button class="buttonSignIn"> Sign in</button>
-                </td>
-                <td class="Indent"></td>
-            </tr>
-        </table>
-        <button class="ButtonPrev"><img src="BPrev.png" class="ButtonPrevNextImg"></button>
-        <button class="ButtonNext"><img src="BNext.png" class="ButtonPrevNextImg"></button>
-        <div class="Content">
-            <div class="IPanelWrap">
-
-                <div class="InterfacePanel">
-                    <div class="IPanelLeft">
-                            <table class="SortSerchElement">
-                            <tr>
-                                <td class="padding"><div class="triangle"></div> Name</td>
-                            </tr>
-                            <tr>
-                                <td>
+        <header>
+            <div class="logo">
+                <img src="logo.png" width="45" height="45">
+            </div>
+            <div class="name-site">
+                PhotoPortal
+            </div>
+            <div class="wrap-button-sign-in">
+                <button class="button-sign-in"> Sign in</button>
+            </div>
+        </header>
+        <button class="button-previous-posts"><img src="BPrev.png" class="button-next-previous-posts-img"></button>
+        <button class="button-next-posts"><img src="BNext.png" class="button-next-previous-posts-img"></button>
+        <div class="content">
+            <div class="interface-panel-wrap">
+                <div class="interface-panel">
+                    <div class="interface-panel-left">
+                        <div class="sort-search-element">
+                            <div class="padding"><div class="triangle"></div> Name</div>
+                                <div>
                                     <p><input type="checkbox">
                                         <label>NameMax</label></p>
                                     <p><input type="checkbox">
@@ -47,473 +35,434 @@
                                     <p><input type="checkbox">
                                         <label>Name1</label></p>
                                     <button class="more">more</button>
-                                </td>
-                            </tr>
-                        </table>
-                            <table class="SortSerchElement">
-                                <tr>
-                                    <td class="padding"><div class="triangle"></div> Tags</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p><input type="checkbox">
-                                            <label>Tag1</label></p>
-                                        <p><input type="checkbox">
-                                            <label>Tag2</label></p>
-                                        <p><input type="checkbox">
-                                            <label>Tag3</label></p>
-                                        <button class="more">more</button>
-                                    </td>
-                                </tr>
-                            </table>
-                            <table class="SortSerchElement">
-                                <tr>
-                                    <td class="padding"><div class="triangle"></div> Date</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <p>From :</p>
-                                        <p><input type="date" class="SortDate"></p>
-                                        <p>To :</p>
-                                        <p><input type="date" class="SortDate"></p>
-                                    </td>
-                                </tr>
-                            </table>
+                                </div>
+                        </div>
+                        <div class="sort-search-element">
+                            <div class="padding"><div class="triangle"></div> Tags</div>
+                            <div>
+                                <p><input type="checkbox">
+                                    <label>Tag1</label></p>
+                                <p><input type="checkbox">
+                                    <label>Tag2</label></p>
+                                <p><input type="checkbox">
+                                    <label>Tag3</label></p>
+                                <button class="more">more</button>
+                            </div>
+                        </div>
+                        <div class="sort-search-element">
+                            <div class="padding"><div class="triangle"></div> Date</div>
+                            <div>
+                                <p>From :</p>
+                                <p><input type="date" class="sort-date"></p>
+                                <p>To :</p>
+                                <p><input type="date" class="sort-date"></p>
+                            </div>
+                        </div>
                     </div>
-                    <div align="center" class="IPanelRight">
-                        <button class="ButtonAddPost"><img src="buttonAdd2.png" width="50"></button>
+                    <div align="center" class="interface-panel-right">
+                        <button class="button-add-post"><img src="buttonAdd2.png" width="50"></button>
                     </div>
-                    <div class="CleanFix"></div>
+                    <div class="clear-fix"></div>
                 </div>
-
-
             </div>
-            <div class="PPanelWrap">
-                <div class="PostPanel" align="center">
-                    <div align="center" class="PostPanelAlign">
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
-                                        </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
-                                        </div>
+            <div class="post-panel-wrap">
+                <div class="post-panel" align="center">
+                    <div align="center" class="post-panel-align">
+                        <div class="post">
+                            <div class="post-img-wrap">
+                                <img src="img2.png" class="post-img">
+                                <div class="post-tag-mobile">
+                                    <span class="post-tag-more">...</span>
+                                    <span class="post-tags">#Tag1</span>
+                                    <span class="post-tags">#Tag2</span>
+                                </div>
+                                <button class="button-like">
+                                    Like
+                                </button>
+                                <div class="nickname">
+                                    nickname
+                                    <div class="date-tag-mobile">DD/MM/YY</div>
+                                </div>
+                            </div>
+                            <div class="info-post">
+                                <div class="info-post-table">
+                                    <div class="info-post-date">
+                                        DD/MM/YY
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                    <div class="info-post-tags">
+                                        <div class="post-tags">#Tag1</div>
+                                        <div class="post-tags">#Tag1</div>
+                                        <div class="post-tags">#Tag1</div>
+                                        <div class="post-tag-more">...</div>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
-                                        </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
-                                        </div>
+                                    <div class="info-post-description">
+                                        <div class="post-description">
+                                            Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
+                                        </div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div align="center" class="PostPanelAlign">
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
-                                        </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
-                                        </div>
+                    <div align="center" class="post-panel-align">
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
-                        <table class="Post">
-                            <tr>
-                                <td>
-                                    <div class="ImgWrap">
-                                        <img src="img2.png" class="IWimg">
-                                        <div class="TagMobile">
-                                            <span class="WrapTagsBMore">...</span>
-                                            <span class="WrapTags">#Tag1</span>
-                                            <span class="WrapTags">#Tag2</span>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
                                         </div>
-                                        <button class="ButtonLike">
-                                            Like
-                                        </button>
-                                        <div class="Nickname">
-                                            Nickname
-                                            <div class="DateMobile">DD/MM/YY</div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
                                         </div>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="InfoOfPost">
-                                        <table class="InfoOfPostTable">
-                                            <tr class="InfoOfPostDate"><td>
-                                                DD/MM/YY
-                                            </td></tr>
-                                            <tr class="InfoOfPostTags"><td>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTags">#Tag1</div>
-                                                <div class="WrapTagsBMore">...</div>
-                                            </td></tr>
-                                            <tr class="InfoOfPostDes"><td>
-                                                <div class="PostDescription">
-                                                    Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
-                                            </td></tr>
-                                        </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post">
+                            <div>
+                                <div class="post-img-wrap">
+                                    <img src="img2.png" class="post-img">
+                                    <div class="post-tag-mobile">
+                                        <span class="post-tag-more">...</span>
+                                        <span class="post-tags">#Tag1</span>
+                                        <span class="post-tags">#Tag2</span>
                                     </div>
-                                </td>
-                            </tr>
-                        </table>
+                                    <button class="button-like">
+                                        Like
+                                    </button>
+                                    <div class="nickname">
+                                        nickname
+                                        <div class="date-tag-mobile">DD/MM/YY</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="info-post">
+                                    <div class="info-post-table">
+                                        <div class="info-post-date">
+                                            DD/MM/YY
+                                        </div>
+                                        <div class="info-post-tags">
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tags">#Tag1</div>
+                                            <div class="post-tag-more">...</div>
+                                        </div>
+                                        <div class="info-post-description">
+                                            <div class="post-description">
+                                                Размер типа int не определяется стандартом языка, а зависит от компьютера и компилятора. Для 16-разрядного процессора под величины этого типа отводятся 2 байта, для 32-битового – 4 байта.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <footer>
-            <table class="footerTable">
-                <tr>
-                    <td class="Indent"></td>
-                    <td>
+                    <div>
                         <p>MyPortal</p>
                         <p>25.02.18</p>
-                    </td>
-                    <td align="right">
+                    </div>
+                    <div align="right">
                         <p>Воронов К.Ю.</p>
                         <p>2 курс, 8 группа</p>
                         <p>assassin13101998@gmail.com</p>
-                    </td>
-                    <td class="Indent"></td>
-                </tr>
-            </table>
+                    </div>
         </footer>
     </div>
+    <script src="functional.js"></script>
+    <script src="DOM.js"></script>
 </body>
 </html>
