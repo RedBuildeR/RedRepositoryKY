@@ -331,15 +331,17 @@
                         height: 35%;
                     }
                     .post-tags{
-                        width: 2.5em;
+                        width: 3.2em;
                         font-size: 0.8em;
                         color: #ffffff;
                         text-decoration: none;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                         outline: none;
                         background: rgba(171, 8, 235, 0.47);
                         border: #d084ee 1px solid;
                         border-radius: 3px;
-                        padding: 1px 2px;
+                        padding: 1px 4px;
                         margin: 0.3em 0.6em 0.3em 0;
                         float: left;
                     }
@@ -359,12 +361,15 @@
                     }
                     .info-post-description{
                         vertical-align: top;
+                        height: calc(65% - 32px);
                     }
                     .post-description{
                         font-family: "Arsenal Regular";
+                        text-decoration: none;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        font-size: 14.4px;
+                        font-size: 0.9em;
+                        line-height: 1.15;
                         height: 50px;
                         width: 100%;
                         text-align: left;
