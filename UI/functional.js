@@ -1,95 +1,81 @@
 
 "use strict";
-var js = (function () {
+var data_handler = (function () {
 
     var PhotoPosts = [];
+    var ArrayAuthor = [];
+    var ArrayTags = [];
+    function getArrayAuthors() {
+        return ArrayAuthor;
+    }
+    function getArrayTags() {
+        return ArrayTags;
+    }
     function lengthPhotoPosts() {
         return PhotoPosts.length;
     }
     function getPhotoPosts(skip, top, filterConfig){
+        // в фильтре можно выбирать 1 дату, 1 автора , и несколько хэштэгов
         if(!skip)
             skip = 0;
         if(!top)
             top = 10;
+        if((typeof top !== "number") || (typeof skip !== "number"))
+            return null;
         PhotoPosts.sort(function (a, b) { return a.date - b.date });
-        if(filterConfig !== undefined){
+        var bufferArray = PhotoPosts.slice(skip,top + skip);
+        if(!filterConfig){
+
             if("date" in filterConfig){
-                if(skip > 0){
-                    var bufferArray = PhotoPosts.slice(skip,top + skip);
-                    return bufferArray.filter(function (value) {
+                if(skip >= 0){
+                    bufferArray = bufferArray.filter(function (value) {
                         if(filterConfig.date === value.date)
                             return true;
                     });
-                }else if(skip < 0){
+                }
+                else{
                     return null;
-                }else{
-                    var bufferArray = PhotoPosts.slice(skip,top);
-                    return bufferArray.filter(function (value) {
-                        if(filterConfig.date.getTime() === value.date.getTime())
-                            return true;
-                    });
                 }
             }
             if("author" in filterConfig){
-                if(skip > 0){
-                    var bufferArray = PhotoPosts.slice(skip,top + skip);
-                    return bufferArray.filter(function (value) {
+                if(skip >= 0){
+                    bufferArray = bufferArray.filter(function (value) {
                         if(filterConfig.author === value.author)
                             return true;
                     });
-                }else if(skip < 0){
-                    return null;
                 }
                 else{
-                    var bufferArray = PhotoPosts.slice(skip,top);
-                    return bufferArray.filter(function (value) {
-                        if(filterConfig.author === value.author)
-                            return true;
-                    });
-                }
-
-            }
-            if("hashTags" in filterConfig){
-                if(skip > 0){
-                    var bufferArray = PhotoPosts.slice(skip,top + skip);
-                    return bufferArray.filter(function (value) {
-                        for(var i = 0; i < PhotoPosts.length; i++){
-                            for(var j = 0; j < PhotoPosts.length; j++){
-                                if(filterConfig.hashTags[i] != value.hashTags[j])
-                                    return false;
-                            }
-                        }
-                        return true;
-                    });
-                }else if(skip < 0){
                     return null;
-                }else{
-                    var bufferArray = PhotoPosts.slice(skip,top);
-                    return bufferArray.filter(function (value) {
-                        var flag;
+                }
+            }
+            if("hashTags" in filterConfig){// мы проходим по массиву постов а в каждом посте по массиву тэгов и тк мы
+                // ищем в посте не один тэг а несколько то мы проходим по массиву тэгов в посте столько раз сколько тэгов ищем
+                // (каждый раз перебор тк искомые посты могут быть в любом месте массива)
+                if(skip >= 0){
+                    bufferArray = bufferArray.filter(function (value) {
                         for(var i = 0; i < filterConfig.hashTags.length; i++){
-                            flag = false;
-                            for(var j = 0; j < value.hashTags.length; j++){
-                                if((filterConfig.hashTags[i] === value.hashTags[j])){
-                                    flag = true;
-                                    break;
-                                }
-                            }
-                            if(!flag)
+
+                            for(var j = 0; j < value.hashTags; j++){
+                                if(filterConfig.hashTags[i] === value.hashTags[j])
+                                    continue;
                                 return false;
+                            }
                         }
                         return true;
                     });
                 }
+                else{
+                    return null;
+                }
             }
+            return bufferArray;
         }
         else{
-            if(skip > 0){
+            if(skip >= 0){
                 return PhotoPosts.slice(skip,top + skip);
-            }else if(skip < 0){
+            }
+            else{
                 return null;
-            }else{
-                return PhotoPosts.slice(skip,top);
             }
         }
 
@@ -118,9 +104,7 @@ var js = (function () {
             return false;
         }else if(!("length" in photoPost.hashTags)){
             return false;
-        }else if(!("likes" in photoPost)||(typeof photoPost.likes !== "object")){
-            return false;
-        }else if(!("length" in photoPost.likes)){
+        }else if(!("likes" in photoPost)||(typeof photoPost.likes !== "number")){
             return false;
         }else if(photoPost.length > 7){
             return false;
@@ -129,42 +113,79 @@ var js = (function () {
             return true;
     }
     function addPhotoPost(photoPost) {
-        if(!(validatePhotoPost(photoPost))){
+        // Функция присваивает новое ID чтобы при добавлении нового поста
+        // исключать случай когда посты разные а ID одинаковые
+        var test = true;
+        for(i = 0; i < PhotoPosts.length; i++){
+            if(PhotoPosts[i].Id === photoPost.Id){
+                test = false;
+                return false;
+            }
+        }
+        if(!(validatePhotoPost(photoPost)) && test){
             return false;
         }else {
-            for(var i = 0; i < PhotoPosts.length; i++){
-                if(PhotoPosts[i].Id === photoPost.Id)
-                    return false;
-            }
             PhotoPosts.push(photoPost);
+            var flag = true;
+            for(i = 0; i < ArrayAuthor.length; i++){
+                if(ArrayAuthor[i] === photoPost.author){
+                    flag = false;
+                }
+            }
+            if(flag){
+                ArrayAuthor.push(photoPost.author);
+            }
+            for(var i = 0; i < photoPost.hashTags.length; i++){
+                flag = true;
+                for(var j = 0; j < ArrayTags.length; j++){
+                    if(ArrayTags[j] === photoPost.hashTags[i]){
+                        flag = false;
+                    }
+                }
+                if(flag){
+                    ArrayTags.push(photoPost.hashTags[i]);
+                }
+            }
             return true;
         }
     }
     function editPhotoPost(id, photoPost) {
-        for(var i = 0; i < PhotoPosts.length; i++){
+        for(i = 0; i < PhotoPosts.length; i++){
             if(PhotoPosts[i].Id === id){
-                var cloneInEdit = {};
-                Object.assign(cloneInEdit,PhotoPosts[i]);
+                var cloneInEdit;
+                cloneInEdit = Object.assign({},PhotoPosts[i]);
                 for(var key in photoPost){
                     if((key !== "Id")&&(key !== "Description")&&(key !== "date")&&(key !== "author")&&(key !== "photoLink")&&(key !== "hashTags")&&(key !== "likes"))
                         return false;
                 }
-                for(key in photoPost){
-                    if(key === "photoLink"){
+                for(var k in photoPost){
+                    if(k === "photoLink"){
                         cloneInEdit.photoLink = photoPost.photoLink;
                     }
-                    if(key === "Description"){
+                    if(k === "Description"){
                         cloneInEdit.Description = photoPost.Description;
                     }
-                    if(key === "hashTags"){
+                    if(k === "hashTags"){
                         cloneInEdit.hashTags = photoPost.hashTags;
+                        var flag = true;
+                        for(var i = 0; i < photoPost.hashTags.length; i++){
+                            flag = true;
+                            for(var j = 0; j < ArrayTags.length; j++){
+                                if(ArrayTags[j] === photoPost.hashTags[i]){
+                                    flag = false;
+                                }
+                            }
+                            if(flag){
+                                ArrayTags.push(photoPost.hashTags[i]);
+                            }
+                        }
                     }
-                    if(validatePhotoPost(cloneInEdit)){
-                        PhotoPosts[i] = cloneInEdit;
-                        return true;
-                    }else
-                        return false;
                 }
+                if(validatePhotoPost(cloneInEdit)){
+                    PhotoPosts[i] = cloneInEdit;
+                    return true;
+                }else
+                    return false;
             }
         }
     }
@@ -172,7 +193,6 @@ var js = (function () {
         for(var i = 0; i < PhotoPosts.length; i++){
             if(PhotoPosts[i].Id === id){
                 PhotoPosts.splice(i,1);
-                displayPhotoPosts(1);
                 return true;
             }
         }
@@ -186,7 +206,9 @@ var js = (function () {
         getPost: getPost,
         lengthPhotoPosts: lengthPhotoPosts,
         editPhotoPost: editPhotoPost,
-        removePhotoPost: removePhotoPost
+        removePhotoPost: removePhotoPost,
+        getArrayAuthors:getArrayAuthors,
+        getArrayTags:getArrayTags
     };
 })();
 var test = {
@@ -196,7 +218,7 @@ var test = {
     author:"Cyril",
     photoLink: "img2.png",
     hashTags:["#cooooool","#Ilove","#ice"],
-    likes:[" "]
+    likes:0
 };
 var test2 = {
     Id: 2,
@@ -205,11 +227,12 @@ var test2 = {
     author:"Mike",
     photoLink: "logo.png",
     hashTags:["tag1","tag2"],
-    likes:[]
+    likes:0
 };
-console.log(" add test1: " + js.addPhotoPost(test));
-console.log(" add test2: " + js.addPhotoPost(test2));
-js.addPhotoPost({Id:3,photoLink:"img2.png",Description:"testAdd",date: new Date(2013,5,6,13),author:"Joe",hashTags:["#super","#goood","#nice"],likes:[]});
-console.log("list of photoposts: " + js.getPhotoPosts(1,10).length);
+console.log(" add test1: " + data_handler.addPhotoPost(test));
+console.log(" add test2: " + data_handler.addPhotoPost(test2));
+console.log(data_handler.addPhotoPost({Id:3,photoLink:"img2.png",Description:"testAdd",date: new Date(2013,5,6,13),author:"Joe",hashTags:["#super","#goood","#nice"],likes:0}));
+console.log("length: " + data_handler.lengthPhotoPosts());
+console.log("list of photoposts: " + data_handler.getPhotoPosts(0,10,{}).length);
 
 

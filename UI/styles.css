@@ -64,6 +64,15 @@
         }
         .wrap-button-sign-in{
             width: 10%;
+            display: flex;
+        }
+        .log-in-name{
+            font-family: "Into Black Regular";
+            color: white;
+            font-size: 16px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
         }
         .button-log-in{
             /*not used*/
@@ -262,6 +271,50 @@
                     .post-img{
                         width: 150px;
                     }
+                    .button-remove{
+                        font-family: "Arsenal Regular";
+                        font-size: 0.8em;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: #ffffff;
+                        text-decoration: none;
+                        outline: none;
+                        background: #00ffff;
+                        border: #00ffff 1px solid;
+                        border-radius: 2.7px;
+                        padding: 0.1em 0.4375em;
+                        margin-top: 4px;
+                        margin-left: 4px;
+                        display: none;
+                    }
+                    .button-remove:active{
+                        color: #00ffff;
+                        background: #ffffff;
+                        border: #00ffff 1px solid;
+                    }
+                    .button-edit{
+                        font-family: "Arsenal Regular";
+                        font-size: 0.8em;
+                        position: absolute;
+                        top: 25px;
+                        left: 0;
+                        color: #ffffff;
+                        text-decoration: none;
+                        outline: none;
+                        background: #00ffff;
+                        border: #00ffff 1px solid;
+                        border-radius: 2.7px;
+                        padding: 0.1em 0.4375em;
+                        margin-top: 4px;
+                        margin-left: 4px;
+                        display: none;
+                    }
+                    .button-edit:active{
+                        color: #00ffff;
+                        background: #ffffff;
+                        border: #00ffff 1px solid;
+                    }
                     .button-like{
                         font-family: "Arsenal Regular";
                         font-size: 1em;
@@ -433,6 +486,9 @@
     }
     .interface-panel-left{
         background: none;
+    }
+    .log-in-name{
+        display: none;
     }
 }
 @media screen and (max-width: 585px){
